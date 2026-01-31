@@ -48,16 +48,19 @@ const CTA = () => {
             お見積りは無料です。どんな小さなことでもお気軽にお問い合わせください。
           </p>
 
+
           {/* Enhanced CTA Button - Gold */}
-          <Button
-            size="lg"
-            className="text-sm tracking-[0.15em] px-16 py-10 group relative overflow-hidden bg-accent hover:bg-accent/90 text-accent-foreground btn-glow transition-all duration-700"
-          >
-            <span className="relative z-10 flex items-center text-base font-medium">
-              無料相談・お問い合わせ
-              <ArrowRight className="ml-4 h-5 w-5 transition-all duration-500 group-hover:translate-x-2" strokeWidth={1.5} />
-            </span>
-          </Button>
+          <a href="#contact">
+            <Button
+              size="lg"
+              className="text-sm tracking-[0.15em] px-16 py-10 group relative overflow-hidden bg-accent hover:bg-accent/90 text-accent-foreground btn-glow transition-all duration-700"
+            >
+              <span className="relative z-10 flex items-center text-base font-medium">
+                無料相談・お問い合わせ
+                <ArrowRight className="ml-4 h-5 w-5 transition-all duration-500 group-hover:translate-x-2" strokeWidth={1.5} />
+              </span>
+            </Button>
+          </a>
 
           {/* Trust indicators */}
           <div className="flex items-center justify-center gap-10 mt-10 text-[11px] tracking-[0.2em] text-primary-foreground/50 uppercase font-medium">

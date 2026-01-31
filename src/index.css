@@ -309,3 +309,190 @@
 .animate-ping {
   animation: ping 1.5s cubic-bezier(0, 0, 0.2, 1) infinite;
 }
+
+/* React Bits Style Animations */
+
+/* Text Reveal Animation */
+@keyframes textReveal {
+  0% {
+    opacity: 0;
+    transform: translateY(100%);
+    filter: blur(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0);
+  }
+}
+
+.text-reveal {
+  animation: textReveal 1.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  animation-delay: var(--delay, 0ms);
+}
+
+/* Character Stagger Animation */
+@keyframes charReveal {
+  0% {
+    opacity: 0;
+    transform: translateY(50px) rotateX(-90deg);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) rotateX(0);
+  }
+}
+
+.char-stagger {
+  display: inline-block;
+  animation: charReveal 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  animation-delay: calc(var(--char-index) * 50ms);
+  opacity: 0;
+}
+
+/* Spotlight/Glow Effect on Hover */
+.spotlight-card {
+  position: relative;
+  overflow: hidden;
+}
+
+.spotlight-card::before {
+  content: '';
+  position: absolute;
+  top: var(--mouse-y, 50%);
+  left: var(--mouse-x, 50%);
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, hsl(38, 70%, 55%, 0.15) 0%, transparent 70%);
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.spotlight-card:hover::before {
+  opacity: 1;
+}
+
+/* Magnetic Button Effect */
+.magnetic-btn {
+  transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  will-change: transform;
+}
+
+.magnetic-btn:hover {
+  transform: translate(var(--x, 0), var(--y, 0));
+}
+
+/* Blur Fade In */
+@keyframes blurFade {
+  0% {
+    opacity: 0;
+    filter: blur(20px);
+    transform: scale(0.95);
+  }
+  100% {
+    opacity: 1;
+    filter: blur(0);
+    transform: scale(1);
+  }
+}
+
+.blur-fade-in {
+  animation: blurFade 1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  animation-delay: var(--delay, 0ms);
+  opacity: 0;
+}
+
+/* Gradient Border Animation */
+@keyframes gradientBorder {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+.gradient-border {
+  position: relative;
+  background: linear-gradient(90deg, hsl(38, 70%, 55%), hsl(45, 80%, 65%), hsl(38, 70%, 55%));
+  background-size: 200% 200%;
+  animation: gradientBorder 3s ease infinite;
+}
+
+/* Floating Animation */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+/* Pulse Glow */
+@keyframes pulseGlow {
+  0%, 100% {
+    box-shadow: 0 0 20px hsl(38, 70%, 55%, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 40px hsl(38, 70%, 55%, 0.6);
+  }
+}
+
+.pulse-glow {
+  animation: pulseGlow 2s ease-in-out infinite;
+}
+
+/* Stagger Children Animation */
+.stagger-children > * {
+  opacity: 0;
+  animation: fadeUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.stagger-children > *:nth-child(1) { animation-delay: 100ms; }
+.stagger-children > *:nth-child(2) { animation-delay: 200ms; }
+.stagger-children > *:nth-child(3) { animation-delay: 300ms; }
+.stagger-children > *:nth-child(4) { animation-delay: 400ms; }
+.stagger-children > *:nth-child(5) { animation-delay: 500ms; }
+.stagger-children > *:nth-child(6) { animation-delay: 600ms; }
+.stagger-children > *:nth-child(7) { animation-delay: 700ms; }
+.stagger-children > *:nth-child(8) { animation-delay: 800ms; }
+
+/* Typewriter Effect */
+@keyframes typewriter {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+@keyframes blink {
+  50% { border-color: transparent; }
+}
+
+.typewriter {
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 2px solid hsl(var(--accent));
+  animation: 
+    typewriter 3s steps(40) 1s forwards,
+    blink 0.75s step-end infinite;
+}
+
+/* Smooth entrance for cards */
+.card-entrance {
+  opacity: 0;
+  transform: translateY(40px) scale(0.95);
+  transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.card-entrance.visible {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+

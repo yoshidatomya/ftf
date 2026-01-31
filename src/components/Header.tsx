@@ -25,8 +25,8 @@ const Header = () => {
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-700 ease-out ${isScrolled
-          ? 'bg-primary/95 backdrop-blur-md py-4 shadow-soft'
-          : 'bg-transparent py-6'
+        ? 'bg-primary/95 backdrop-blur-md py-4 shadow-soft'
+        : 'bg-transparent py-6'
         }`}
     >
       <div className="container-refined flex items-center justify-between">
@@ -58,12 +58,14 @@ const Header = () => {
         </nav>
 
         <div className="hidden lg:block">
-          <Button
-            size="sm"
-            className="text-sm tracking-[0.1em] px-8 py-6 bg-accent hover:bg-accent/90 text-accent-foreground transition-all duration-500 font-medium btn-glow"
-          >
-            無料相談
-          </Button>
+          <a href="#contact">
+            <Button
+              size="sm"
+              className="text-sm tracking-[0.1em] px-8 py-6 bg-accent hover:bg-accent/90 text-accent-foreground transition-all duration-500 font-medium btn-glow"
+            >
+              無料相談
+            </Button>
+          </a>
         </div>
 
         {/* Mobile Menu Button */}
@@ -90,11 +92,13 @@ const Header = () => {
                 {link.label}
               </a>
             ))}
-            <Button
-              className="text-sm tracking-[0.15em] mt-4 bg-accent hover:bg-accent/90 text-accent-foreground"
-            >
-              無料相談
-            </Button>
+            <a href="#contact" onClick={() => setIsMobileMenuOpen(false)}>
+              <Button
+                className="text-sm tracking-[0.15em] mt-4 bg-accent hover:bg-accent/90 text-accent-foreground w-full"
+              >
+                無料相談
+              </Button>
+            </a>
           </div>
         </nav>
       )}

@@ -7,23 +7,23 @@ const Hero = () => {
     <section id="hero" className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Hero Image Background */}
       <div className="absolute inset-0">
-        <img 
-          src={heroImage} 
-          alt="和モダン建築" 
+        <img
+          src={heroImage}
+          alt="和モダン建築"
           className="w-full h-full object-cover"
         />
         {/* Deep indigo gradient overlay */}
         <div className="absolute inset-0 bg-gradient-to-b from-primary/70 via-primary/50 to-background" />
         <div className="absolute inset-0 bg-gradient-to-r from-primary/60 via-transparent to-primary/60" />
-        
+
         {/* Vignette effect */}
-        <div 
+        <div
           className="absolute inset-0 pointer-events-none"
           style={{
             background: 'radial-gradient(ellipse at center, transparent 30%, hsl(222, 47%, 18%, 0.5) 100%)',
           }}
         />
-        
+
         {/* Subtle gold shimmer overlay */}
         <div className="absolute inset-0 opacity-10 bg-gold-shimmer pointer-events-none" />
       </div>
@@ -58,7 +58,7 @@ const Hero = () => {
             <span className="block text-2xl md:text-3xl text-primary-foreground/70 mb-4 font-light tracking-widest">
               あなたの思い描く
             </span>
-            <span 
+            <span
               className="block text-6xl md:text-7xl lg:text-8xl xl:text-9xl text-primary-foreground tracking-tight"
               style={{ textShadow: '0 4px 40px hsl(222, 47%, 10%, 0.5)' }}
             >
@@ -83,23 +83,27 @@ const Hero = () => {
 
           {/* CTA Buttons - Premium Gold styling */}
           <div className="flex flex-col sm:flex-row gap-5 animate-fade-up animation-delay-400">
-            <Button
-              size="lg"
-              className="text-sm tracking-[0.15em] px-12 py-8 group relative overflow-hidden bg-accent hover:bg-accent/90 text-accent-foreground btn-glow transition-all duration-700"
-            >
-              <span className="relative z-10 flex items-center font-medium">
-                無料相談はこちら
-                <ArrowRight className="ml-4 h-5 w-5 transition-all duration-500 group-hover:translate-x-2" strokeWidth={1.5} />
-              </span>
-            </Button>
-            <Button
-              variant="outline"
-              size="lg"
-              className="text-sm tracking-[0.15em] px-12 py-8 border-primary-foreground/30 text-primary-foreground bg-primary-foreground/5 backdrop-blur-sm hover:bg-primary-foreground hover:text-primary hover:border-primary-foreground transition-all duration-700 group"
-            >
-              施工内容を見る
-              <ChevronDown className="ml-3 h-5 w-5 transition-all duration-500 group-hover:translate-y-1" strokeWidth={1.5} />
-            </Button>
+            <a href="#contact">
+              <Button
+                size="lg"
+                className="text-sm tracking-[0.15em] px-12 py-8 group relative overflow-hidden bg-accent hover:bg-accent/90 text-accent-foreground btn-glow transition-all duration-700 w-full"
+              >
+                <span className="relative z-10 flex items-center font-medium">
+                  無料相談はこちら
+                  <ArrowRight className="ml-4 h-5 w-5 transition-all duration-500 group-hover:translate-x-2" strokeWidth={1.5} />
+                </span>
+              </Button>
+            </a>
+            <a href="#services">
+              <Button
+                variant="outline"
+                size="lg"
+                className="text-sm tracking-[0.15em] px-12 py-8 border-primary-foreground/30 text-primary-foreground bg-primary-foreground/5 backdrop-blur-sm hover:bg-primary-foreground hover:text-primary hover:border-primary-foreground transition-all duration-700 group w-full"
+              >
+                施工内容を見る
+                <ChevronDown className="ml-3 h-5 w-5 transition-all duration-500 group-hover:translate-y-1" strokeWidth={1.5} />
+              </Button>
+            </a>
           </div>
         </div>
 

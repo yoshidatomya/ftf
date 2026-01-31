@@ -31,14 +31,14 @@ const Philosophy = () => {
     <section id="philosophy" className="section-padding relative overflow-hidden">
       {/* Background gradient */}
       <div className="absolute inset-0 bg-gradient-to-b from-background via-secondary/30 to-background" />
-      
+
       {/* Decorative elements */}
       <div className="absolute top-20 left-10 w-72 h-72 bg-accent/5 rounded-full blur-3xl pointer-events-none" />
       <div className="absolute bottom-20 right-10 w-96 h-96 bg-primary/5 rounded-full blur-3xl pointer-events-none" />
-      
+
       {/* Japanese pattern accent */}
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-accent/30 to-transparent" />
-      
+
       <div className="container-refined relative z-10" ref={ref}>
         {/* Section Header */}
         <div className={`text-center mb-20 transition-all duration-1000 ${isInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
@@ -50,17 +50,17 @@ const Philosophy = () => {
             </span>
             <span className="text-accent text-2xl font-serif">」</span>
           </div>
-          
+
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-serif mb-10">
             私たちの<span className="text-gold-gradient">想い</span>
           </h2>
-          
+
           <div className="flex items-center justify-center gap-4 mb-10">
             <div className="w-16 h-px bg-gradient-to-r from-transparent to-accent" />
             <div className="w-3 h-3 rotate-45 border border-accent" />
             <div className="w-16 h-px bg-gradient-to-l from-transparent to-accent" />
           </div>
-          
+
           <p className="text-lg md:text-xl text-muted-foreground leading-relaxed max-w-3xl mx-auto font-light">
             私たちは、単に施工を行うだけの会社ではありません。
             <br className="hidden md:block" />
@@ -85,31 +85,37 @@ const Philosophy = () => {
             return (
               <div
                 key={point.title}
-                className={`group relative p-8 rounded-lg border border-border/50 bg-card/50 backdrop-blur-sm hover:bg-card hover:border-accent/30 hover:shadow-soft transition-all duration-700 cursor-default ${
-                  isInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'
-                }`}
+                className={`spotlight-card group relative p-8 rounded-lg border border-border/50 bg-card/50 backdrop-blur-sm hover:bg-card hover:border-accent/30 hover:shadow-soft transition-all duration-700 cursor-default ${isInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'
+                  }`}
                 style={{ transitionDelay: `${300 + index * 150}ms` }}
+                onMouseMove={(e) => {
+                  const rect = e.currentTarget.getBoundingClientRect();
+                  const x = e.clientX - rect.left;
+                  const y = e.clientY - rect.top;
+                  e.currentTarget.style.setProperty('--mouse-x', `${x}px`);
+                  e.currentTarget.style.setProperty('--mouse-y', `${y}px`);
+                }}
               >
                 {/* Glassmorphism overlay on hover */}
                 <div className="absolute inset-0 rounded-lg bg-gradient-to-br from-accent/5 via-transparent to-accent/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                
+
                 <div className="relative z-10">
                   {/* Icon with gold accent */}
                   <div className="w-14 h-14 rounded-full bg-accent/10 flex items-center justify-center mb-6 group-hover:scale-110 group-hover:bg-accent/20 transition-all duration-500">
                     <Icon className="w-6 h-6 text-accent" strokeWidth={1.5} />
                   </div>
-                  
+
                   {/* Title */}
                   <h3 className="text-xl md:text-2xl font-serif mb-4 group-hover:translate-x-1 transition-transform duration-500">
                     {point.title}
                   </h3>
-                  
+
                   {/* Description */}
                   <p className="text-muted-foreground leading-relaxed text-sm md:text-base">
                     {point.description}
                   </p>
                 </div>
-                
+
                 {/* Decorative corner accent */}
                 <div className="absolute top-4 right-4 w-8 h-8 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
                   <div className="absolute top-0 right-0 w-full h-px bg-gradient-to-l from-accent to-transparent" />
@@ -120,7 +126,7 @@ const Philosophy = () => {
           })}
         </div>
       </div>
-      
+
       {/* Bottom decorative line */}
       <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-accent/30 to-transparent" />
     </section>

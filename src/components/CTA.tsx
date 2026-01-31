@@ -6,23 +6,22 @@ const CTA = () => {
   const { ref, isInView } = useInView({ threshold: 0.3 });
 
   return (
-    <section id="contact" className="section-padding bg-primary text-primary-foreground relative overflow-hidden">
+    <section id="cta" className="section-padding bg-primary text-primary-foreground relative overflow-hidden">
       {/* Background elements */}
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-accent/30 to-transparent" />
-      
+
       {/* Decorative circles - Gold */}
       <div className="absolute top-20 left-10 w-40 h-40 rounded-full border border-accent/10 pointer-events-none" />
       <div className="absolute bottom-20 right-10 w-56 h-56 rounded-full border border-accent/5 pointer-events-none" />
-      
+
       {/* Gold shimmer overlay */}
       <div className="absolute inset-0 opacity-5 bg-gold-shimmer pointer-events-none" />
 
       <div className="container-refined relative z-10">
         <div
           ref={ref}
-          className={`max-w-3xl mx-auto text-center transition-all duration-1000 ${
-            isInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'
-          }`}
+          className={`max-w-3xl mx-auto text-center transition-all duration-1000 ${isInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'
+            }`}
         >
           {/* Section header with decorative brackets */}
           <div className="inline-flex items-center gap-4 mb-10">
@@ -32,7 +31,7 @@ const CTA = () => {
             </span>
             <span className="text-accent text-2xl font-serif">」</span>
           </div>
-          
+
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif mb-10 leading-relaxed">
             住まいのこと、
             <br className="md:hidden" />
@@ -44,7 +43,7 @@ const CTA = () => {
             <div className="w-3 h-3 rotate-45 border border-accent" />
             <div className="w-16 h-px bg-gradient-to-l from-transparent to-accent" />
           </div>
-          
+
           <p className="text-primary-foreground/70 mb-16 leading-relaxed max-w-lg mx-auto text-lg font-light">
             お見積りは無料です。どんな小さなことでもお気軽にお問い合わせください。
           </p>

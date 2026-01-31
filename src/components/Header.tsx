@@ -17,24 +17,24 @@ const Header = () => {
   const navLinks = [
     { href: '#about', label: '会社概要' },
     { href: '#services', label: '施工内容' },
-    { href: '#strengths', label: '特長' },
+    { href: '#gallery', label: '施工実績' },
+    { href: '#before-after', label: 'ビフォーアフター' },
     { href: '#contact', label: 'お問い合わせ' },
   ];
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-700 ease-out ${
-        isScrolled
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-700 ease-out ${isScrolled
           ? 'bg-primary/95 backdrop-blur-md py-4 shadow-soft'
           : 'bg-transparent py-6'
-      }`}
+        }`}
     >
       <div className="container-refined flex items-center justify-between">
         <a href="#" className="flex items-center gap-4 group">
           <div className="relative">
-            <img 
-              src="/favicon.png" 
-              alt="株式会社ONE" 
+            <img
+              src="/favicon.png"
+              alt="株式会社ONE"
               className="w-9 h-9 md:w-10 md:h-10 transition-transform duration-500 group-hover:scale-110"
             />
             <div className="absolute inset-0 rounded-full bg-accent/20 blur-md opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
@@ -58,8 +58,8 @@ const Header = () => {
         </nav>
 
         <div className="hidden lg:block">
-          <Button 
-            size="sm" 
+          <Button
+            size="sm"
             className="text-sm tracking-[0.1em] px-8 py-6 bg-accent hover:bg-accent/90 text-accent-foreground transition-all duration-500 font-medium btn-glow"
           >
             無料相談
@@ -90,7 +90,7 @@ const Header = () => {
                 {link.label}
               </a>
             ))}
-            <Button 
+            <Button
               className="text-sm tracking-[0.15em] mt-4 bg-accent hover:bg-accent/90 text-accent-foreground"
             >
               無料相談

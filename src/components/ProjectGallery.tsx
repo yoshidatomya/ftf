@@ -13,7 +13,7 @@ const projectImages = [
     {
         src: '/assets/WhatsApp Image 2026-01-31 at 14.56.51.jpeg',
         alt: '施工実績 - 集合住宅',
-        category: 'マンション',
+        category: 'アパート',
     },
     {
         src: '/assets/WhatsApp Image 2026-01-31 at 14.56.51 (1).jpeg',
@@ -33,7 +33,7 @@ const projectImages = [
     {
         src: '/assets/WhatsApp Image 2026-01-31 at 14.56.52 (1).jpeg',
         alt: '施工実績 - 集合住宅外観',
-        category: 'マンション',
+        category: 'アパート',
     },
     {
         src: '/assets/WhatsApp Image 2026-01-31 at 14.56.53.jpeg',

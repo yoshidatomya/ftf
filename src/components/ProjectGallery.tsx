@@ -16,11 +16,6 @@ const projectImages = [
         category: 'アパート',
     },
     {
-        src: '/assets/WhatsApp Image 2026-01-31 at 14.56.51 (2).jpeg',
-        alt: '施工実績 - 外壁塗装',
-        category: '戸建て',
-    },
-    {
         src: '/assets/WhatsApp Image 2026-01-31 at 14.56.52.jpeg',
         alt: '施工実績 - モダン住宅',
         category: '戸建て',
@@ -34,11 +29,6 @@ const projectImages = [
         src: '/assets/WhatsApp Image 2026-01-31 at 14.56.53 (1).jpeg',
         alt: '施工実績 - カラフル住宅',
         category: '戸建て',
-    },
-    {
-        src: '/assets/WhatsApp Image 2026-01-31 at 14.56.53 (2).jpeg',
-        alt: '施工実績 - 現代的住宅',
-        category: 'アパート',
     },
 ];
 

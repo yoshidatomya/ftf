@@ -6,11 +6,6 @@ import { useInView } from '@/hooks/useInView';
 // Import all project images
 const projectImages = [
     {
-        src: '/assets/WhatsApp Image 2026-01-31 at 14.56.50.jpeg',
-        alt: '施工実績 - アパート外観',
-        category: 'アパート',
-    },
-    {
         src: '/assets/WhatsApp Image 2026-01-31 at 14.56.51.jpeg',
         alt: '施工実績 - 集合住宅',
         category: 'アパート',
@@ -29,11 +24,6 @@ const projectImages = [
         src: '/assets/WhatsApp Image 2026-01-31 at 14.56.52.jpeg',
         alt: '施工実績 - モダン住宅',
         category: '戸建て',
-    },
-    {
-        src: '/assets/WhatsApp Image 2026-01-31 at 14.56.52 (1).jpeg',
-        alt: '施工実績 - 集合住宅外観',
-        category: 'アパート',
     },
     {
         src: '/assets/WhatsApp Image 2026-01-31 at 14.56.53.jpeg',
@@ -206,8 +196,8 @@ const ProjectGallery = () => {
                             key={index}
                             onClick={() => scrollTo(index)}
                             className={`w-2 h-2 rounded-full transition-all duration-300 ${selectedIndex === index
-                                    ? 'w-8 bg-accent'
-                                    : 'bg-border hover:bg-muted-foreground'
+                                ? 'w-8 bg-accent'
+                                : 'bg-border hover:bg-muted-foreground'
                                 }`}
                             aria-label={`Go to slide ${index + 1}`}
                         />

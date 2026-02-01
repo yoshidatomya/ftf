@@ -16,6 +16,12 @@ const beforeAfterItems: BeforeAfterItem[] = [
         title: '外壁塗装リフォーム',
         description: '経年劣化した外壁を美しく生まれ変わらせました',
     },
+    {
+        before: '/assets/WhatsApp Image 2026-01-31 at 14.56.50.jpeg',
+        after: '/assets/WhatsApp Image 2026-01-31 at 14.56.52 (1).jpeg',
+        title: 'アパート外装リフォーム',
+        description: 'アパート外観を美しくリニューアルしました',
+    },
 ];
 
 const BeforeAfterSlider = ({ item }: { item: BeforeAfterItem }) => {
@@ -153,7 +159,7 @@ const BeforeAfter = () => {
                 </div>
 
                 {/* Before/After Slider */}
-                <div className={`max-w-4xl mx-auto transition-all duration-1000 delay-300 ${isInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'}`}>
+                <div className={`max-w-4xl mx-auto flex flex-col gap-12 transition-all duration-1000 delay-300 ${isInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'}`}>
                     {beforeAfterItems.map((item, index) => (
                         <BeforeAfterSlider key={index} item={item} />
                     ))}

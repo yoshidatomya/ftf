@@ -16,11 +16,6 @@ const projectImages = [
         category: 'アパート',
     },
     {
-        src: '/assets/WhatsApp Image 2026-01-31 at 14.56.52.jpeg',
-        alt: '施工実績 - モダン住宅',
-        category: '戸建て',
-    },
-    {
         src: '/assets/WhatsApp Image 2026-01-31 at 14.56.53.jpeg',
         alt: '施工実績 - 戸建て住宅',
         category: '戸建て',

@@ -8,13 +8,12 @@ const About = () => {
       {/* Decorative background elements */}
       <div className="absolute top-20 right-0 w-96 h-96 bg-accent/5 rounded-full blur-3xl pointer-events-none" />
       <div className="absolute bottom-20 left-0 w-64 h-64 bg-primary/5 rounded-full blur-3xl pointer-events-none" />
-      
+
       <div className="container-refined relative z-10">
         <div
           ref={ref}
-          className={`max-w-4xl mx-auto text-center transition-all duration-1000 ease-out ${
-            isInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'
-          }`}
+          className={`max-w-4xl mx-auto text-center transition-all duration-1000 ease-out ${isInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'
+            }`}
         >
           {/* Section header with decorative brackets */}
           <div className="inline-flex items-center gap-4 mb-10">
@@ -24,7 +23,7 @@ const About = () => {
             </span>
             <span className="text-accent text-2xl font-serif">」</span>
           </div>
-          
+
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-serif mb-10 tracking-wide">
             株式会社<span className="text-gold-gradient">ONE</span>について
           </h2>
@@ -40,6 +39,9 @@ const About = () => {
             <br className="hidden md:block" />
             住宅専門の総合リフォーム会社です。
           </p>
+          <p className="text-lg md:text-xl text-gold-gradient leading-[2.2] mb-6 font-medium">
+            主に外壁塗装をメインとして活動中です
+          </p>
           <p className="text-lg md:text-xl text-muted-foreground leading-[2.2] font-light">
             お住まいの価値を長く守るため、
             <br className="hidden md:block" />
@@ -54,11 +56,10 @@ const About = () => {
               { value: '98%', label: '顧客満足度' },
               { value: '7', label: '対応工事' },
             ].map((stat, index) => (
-              <div 
-                key={stat.label} 
-                className={`text-center group transition-all duration-700 ${
-                  isInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
-                }`}
+              <div
+                key={stat.label}
+                className={`text-center group transition-all duration-700 ${isInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+                  }`}
                 style={{ transitionDelay: `${400 + index * 100}ms` }}
               >
                 <div className="text-4xl md:text-5xl font-serif text-gold-gradient mb-3 group-hover:scale-110 transition-transform duration-500">

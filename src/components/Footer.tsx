@@ -134,7 +134,7 @@ const Footer = () => {
                   <MapPin className="w-4 h-4" strokeWidth={1.5} />
                 </div>
                 <div className="text-sm">
-                  <p>〒263-0000</p>
+                  <p>〒263-0003</p>
                   <p>千葉県千葉市稲毛区</p>
                   <p>小深町535-2</p>
                 </div>

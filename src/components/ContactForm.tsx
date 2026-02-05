@@ -153,7 +153,7 @@ const ContactForm = () => {
                                 <div>
                                     <h4 className="font-medium mb-1">所在地</h4>
                                     <p className="text-muted-foreground">
-                                        〒263-0000<br />
+                                        〒263-0003<br />
                                         千葉県千葉市稲毛区小深町535-2
                                     </p>
                                 </div>
